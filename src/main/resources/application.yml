@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: personal-finance-manager
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/pfm}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+server:
+  servlet:
+    context-path: /
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:replace-with-a-long-random-local-secret}
+    access-token-minutes: 15
+    refresh-token-days: 7
+  storage:
+    upload-dir: ${UPLOAD_DIR:uploads}
