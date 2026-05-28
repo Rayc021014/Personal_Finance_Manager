@@ -3,7 +3,11 @@
 This project now uses:
 
 - `Spring Boot` as the backend API
-- `Nuxt 3` in [frontend](D:/Tools/Codex/Personal%20Finance%20Manager/frontend) as the frontend app
+- `Nuxt 3` in [frontend](frontend/) as the frontend app
+
+## Preview
+
+![Personal Finance Manager dashboard](docs/readme-dashboard.png)
 
 ## Local infrastructure
 
